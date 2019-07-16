@@ -51,16 +51,18 @@
 <h2 class="m-4">LA COMPAGNIE</h2>
 
     {# CARD #}
+
     <div class="container">
         <div class="row">
             {% for artist in artists %}
-
+<a href="{{ path('artist_show', {'id': artist.id})  }}">
                 <div class="col-4 m-3">
                     <div class="image_profil">
                     <img class="" src="{{ artist.img }}" alt="Card image cap">
                         <h5 class="card-title">{{ artist.name }}</h5>
                     </div>
                 </div>
+</a>
             {% endfor %}
         </div>
     </div>

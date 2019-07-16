@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artiste{% endblock %}
+
+{% block body %}
+
+    <img src="{{ artist.img }}" alt="{{ artist.name }}">
+
+    <h2>{{ artist.name }}</h2>
+    <h2>{{ artist.job }}</h2>
+
+    <p>On peut retrouver {{ artist.name }} dans différents show :</p>
+<ul>
+{% for performance in artist.performance %}
+    <li>  {{ performance.title }} </li>
+{% endfor %}
+</ul>
+    {% include 'inc/_button.html.twig' %}
+
+    <p>Contacter {{ artist.name }} en cliquant ici -> <a href="mailto:{{ artist.mail }}"> <i class="fa fa-envelope-o"></i></a>
+</p>
+
+
+
+{% endblock  %}
