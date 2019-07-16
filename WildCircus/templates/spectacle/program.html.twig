@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SpectacleController!{% endblock %}
+
+{% block body %}
+    <ul>
+    {% for performance in performances %}
+        {% for spectacle in performance.spectacles %}
+            <li>{{ spectacle.name }}</li>
+            {% endfor %}
+        <li>{{ performance.title }}</li>
+        {% for artist in performance.artists %}
+            <li>{{ artist.name }}</li>
+        {% endfor %}
+
+
+    {% endfor %}
+
+    </ul>
+
+
+    <h2>SPECTACLE </h2>
+{% endblock %}

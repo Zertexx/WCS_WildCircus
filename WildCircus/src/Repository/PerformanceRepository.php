@@ -19,6 +19,17 @@ class PerformanceRepository extends ServiceEntityRepository
         parent::__construct($registry, Performance::class);
     }
 
+    public function findAllPerfsWithSpectacleAndArtist()
+    {
+        return $this->createQueryBuilder('p')
+            ->innerJoin('p.artists', 'a' )
+            ->innerJoin('p.spectacles', 's' )
+            ->orderBy('p.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Performance[] Returns an array of Performance objects
     //  */
