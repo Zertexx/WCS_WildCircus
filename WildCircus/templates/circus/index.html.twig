@@ -3,18 +3,66 @@
 {% block title %}Hello CircusController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="container">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/zerto/Workspace/Checkpoint4/WCS_WildCircus/WildCircus/src/Controller/CircusController.php'|file_link(0) }}">src/Controller/CircusController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/zerto/Workspace/Checkpoint4/WCS_WildCircus/WildCircus/templates/circus/index.html.twig'|file_link(0) }}">templates/circus/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <div class="bd-example py5-5">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://live2u.com/toronto/wp-content/uploads/sites/2/cache/images/acrobatic-ladders/acrobatic-ladders-1157594030.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Gambar Slide Yang Pertama</h5>
+                            <p>Gambar pemandangan sungai.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.edgecombe.edu/files/2018/02/cordis-ABC-LCE-2018-w.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Gambar Slide Yang Kedua</h5>
+                            <p>Gambar pemandangan sawah di desa.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.sudouest.fr/2017/10/19/59e8b49c66a4bd0d304a4777/widescreen/1000x500/certains-artistes-du-cirque-infernal-ont-travaille-pour-le-celebre-cirque-du-soleil.jpg?v1" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Gambar Slide Yang Ketiga</h5>
+                            <p>Gambar pemandangan taman belakang rumah.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+<h2 class="m-4">LA COMPAGNIE</h2>
+
+    {# CARD #}
+    <div class="container">
+        <div class="row">
+            {% for artist in artists %}
+
+                <div class="col-4 m-3">
+                    <div class="image_profil">
+                    <img class="" src="{{ artist.img }}" alt="Card image cap">
+                        <h5 class="card-title">{{ artist.name }}</h5>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
 {% endblock %}

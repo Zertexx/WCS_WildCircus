@@ -1,0 +1,23 @@
+body{
+    background-image: url("images/bg.jpg");
+    color: white;
+}
+footer{
+    background: white;
+}
+footer a p{
+    color: black;
+}
+
+
+/***** CARD ******/
+
+.image_profil{
+    width: 256px;
+    height: 256px;
+}
+
+
+/***** END CARD ******/
+
+
