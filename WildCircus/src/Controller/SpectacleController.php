@@ -2,8 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Performance;
-use App\Repository\PerformanceRepository;
+use App\Repository\SpectacleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,10 +11,10 @@ class SpectacleController extends AbstractController
     /**
      * @Route("/spectacle/programme", name="spectacle_program")
      */
-    public function showSpectacles(PerformanceRepository $performanceRepository)
+    public function showSpectacles(SpectacleRepository $spectacleRepository)
     {
         return $this->render('spectacle/program.html.twig', [
-            'performances' => $performanceRepository->findAllPerfsWithSpectacleAndArtist(),
+            'spectacles' => $spectacleRepository->findAllSpectacleWithPerf(),
         ]);
     }
 }

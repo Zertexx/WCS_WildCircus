@@ -1,6 +1,8 @@
 body{
     background-image: url("images/bg.jpg");
+    background-attachment: fixed;
     color: white;
+    font-family: 'Poiret One', cursive;
 }
 footer{
     background: white;
@@ -9,6 +11,25 @@ footer a p{
     color: black;
 }
 
+.titre_soyeux{
+    font-size: 4rem;
+    padding-top: 10%;
+    color: #642626;
+    text-shadow: 1px 1px 1px darkred;
+
+}
+nav{
+    background: #642626;
+    font-size: 1.5rem;
+}
+.logo_circus{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+footer{
+    background: #642626;
+}
 
 /***** CARD ******/
 

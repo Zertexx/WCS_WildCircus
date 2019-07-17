@@ -6,6 +6,13 @@
 
     <div class="container">
 
+        <h1 class="d-flex justify-content-center titre_soyeux">BIENVENUE AU CIRQUE DES SOYEUX</h1>
+
+        <div class="d-flex justify-content-center logo_circus">
+            <img src="assets/images/logo.png" alt="logo">
+        </div>
+        {# CAROUSEL #}
+
         <div class="bd-example py5-5">
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -48,21 +55,24 @@
         </div>
 
     </div>
-<h2 class="m-4">LA COMPAGNIE</h2>
+
+    {# CAROUSEL #}
+
+    <h2 class="m-4">LA COMPAGNIE</h2>
 
     {# CARD #}
 
     <div class="container">
         <div class="row">
             {% for artist in artists %}
-<a href="{{ path('artist_show', {'id': artist.id})  }}">
-                <div class="col-4 m-3">
-                    <div class="image_profil">
-                    <img class="" src="{{ artist.img }}" alt="Card image cap">
-                        <h5 class="card-title">{{ artist.name }}</h5>
+                <a href="{{ path('artist_show', {'id': artist.id})  }}">
+                    <div class="col-4 m-3">
+                        <div class="image_profil">
+                            <img class="" src="{{ artist.img }}" alt="Card image cap">
+                            <h5 class="card-title">{{ artist.name }}</h5>
+                        </div>
                     </div>
-                </div>
-</a>
+                </a>
             {% endfor %}
         </div>
     </div>
