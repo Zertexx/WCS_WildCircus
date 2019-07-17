@@ -3,7 +3,8 @@
 {% block title %}Notre histoire{% endblock %}
 
 {% block body %}
-    <img src="http://www.ticketac.com/upload/salle/photos/DSC0241.png" alt="Notre équipe">
+    <div class="image_history">
+    </div>
     <div class="container">
         <h2 class="text-center p-4">NOTRE EQUIPE</h2>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci amet assumenda cupiditate eos illo, laudantium nam necessitatibus non, nostrum placeat possimus quibusdam quo sit sunt, tempore ullam? Nemo, quo.
@@ -12,27 +13,25 @@
         </p>
 
 
-        <h2 class="text-center p-4">OU SONT PASSÉS LES ANIMAUX??</h2>
+        <h2 class="text-center p-4">OU SONT PASSÉS LES ANIMAUX ?</h2>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci amet assumenda cupiditate eos illo, laudantium nam necessitatibus non, nostrum placeat possimus quibusdam quo sit sunt, tempore ullam? Nemo, quo.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci amet assumenda cupiditate eos illo, laudantium nam necessitatibus non, nostrum placeat possimus quibusdam quo sit sunt, tempore ullam? Nemo, quo.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci amet assumenda cupiditate eos illo, laudantium nam necessitatibus non, nostrum placeat possimus quibusdam quo sit sunt, tempore ullam? Nemo, quo.
         </p>
         <hr>
-
+    </div>
+    <div class="container contact_us">
         <h2 class="text-center p-4">NOUS CONTACTER</h2>
 
 
-    {{ form_start(form) }}
-    {{ form_row(form.name) }}
-    {{ form_row(form.phone) }}
-    {{ form_row(form.email) }}
-    {{ form_row(form.message) }}
-    {{ form_rest(form) }}
-    <button class="btn btn-success">Envoyer</button>
-    {{ form_end(form) }}
-
-
-
-
+        {{ form_start(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.phone) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.message) }}
+        {{ form_rest(form) }}
+        <button class="btn btn-success">Envoyer</button>
+        {{ form_end(form) }}
+    </div>
     </div>
 {% endblock %}

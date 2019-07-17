@@ -17,7 +17,7 @@
                     <p style="line-height: 60px; text-align: center; margin: 10px 0;font-size:55px;color:rgba(46, 49, 49, 1);font-family:'Times New Roman',Helvetica,Arial,sans-serif"><b>Bonjour {{ reservation.firstname }}</b></p>
                 </mj-text>
                 <mj-text align="left" color="rgba(46, 49, 49, 1)" font-family="Arial, sans-serif" font-size="13px" line-height="22px" padding-bottom="20px" padding-top="0px" padding="10px 25px">
-                    <p style="line-height: 30px; text-align: center; margin: 10px 0;color:rgba(46, 49, 49, 1);font-size:25px;font-family:'Times New Roman',Helvetica,Arial,sans-serif"><b>&nbsp; Vous avez fait une réservation pour {{ reservation.nbperson }} personne(s)</b><br/>N'oubliez surtout pas votre carte d'identité pour pouvoir profiter de l'offre<br/><br/> A bientôt<span style="color:rgba(46, 49, 49, 1);font-size:18px;font-family:'Times New Roman',Helvetica,Arial,sans-serif"><br/><a href ="{{ path('circus_index') }}">Retour sur le site</a></span></p>
+                    <p style="line-height: 30px; text-align: center; margin: 10px 0;color:rgba(46, 49, 49, 1);font-size:25px;font-family:'Times New Roman',Helvetica,Arial,sans-serif"><b>&nbsp; Vous avez fait une réservation de {{ reservation.nbperson }} personne(s) pour le spectacle {{ reservation.spectacle }}</b><br/>N'oubliez surtout pas votre carte d'identité pour pouvoir profiter de l'offre<br/><br/> A bientôt<span style="color:rgba(46, 49, 49, 1);font-size:18px;font-family:'Times New Roman',Helvetica,Arial,sans-serif"><br/></span></p>
                 </mj-text>
             </mj-column>
         </mj-section>

@@ -3,11 +3,13 @@
 {% block title %}Nos programmes{% endblock %}
 
 {% block body %}
+    <h1 class="text-center p-5">Nos programmes du moment et leurs numéros</h1>
+    <hr class="hr_program">
+
     <div class="container d-flex justify-content-between p-5">
         {% for spectacle in spectacles %}
             <div class="block">
-                <h2>{{ spectacle.name }}</h2>
-                <p>1ère partie</p>
+                <h2 class="p-3 spectacle_name">{{ spectacle.name }}</h2>
                 <ul>
                     {% for performance in spectacle.performance %}
                         <li>{{ performance.title }}</li><br>

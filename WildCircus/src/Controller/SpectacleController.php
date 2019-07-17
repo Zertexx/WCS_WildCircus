@@ -10,6 +10,8 @@ class SpectacleController extends AbstractController
 {
     /**
      * @Route("/spectacle/programme", name="spectacle_program")
+     * @param SpectacleRepository $spectacleRepository
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function showSpectacles(SpectacleRepository $spectacleRepository)
     {

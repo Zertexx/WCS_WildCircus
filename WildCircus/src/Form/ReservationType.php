@@ -40,12 +40,12 @@ class ReservationType extends AbstractType
             ->add('nbperson', ChoiceType::class, [
                 'label' => 'Nombre de personnes',
                 'choices'  => [
-                    '1' => null,
-                    '2' => true,
-                    '3' => false,
-                    '4' => false,
-                    '5' => false,
-                    '6' => false,
+                    '1' => 1,
+                    '2' => 2,
+                    '3' => 3,
+                    '4' => 4,
+                    '5' => 5,
+                    '6' => 6,
                     ]
 
 
