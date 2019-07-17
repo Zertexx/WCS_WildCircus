@@ -1,23 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SpectacleController!{% endblock %}
+{% block title %}Nos programmes{% endblock %}
 
 {% block body %}
-    <ul>
-    {% for performance in performances %}
-        {% for spectacle in performance.spectacles %}
-            <li>{{ spectacle.name }}</li>
+    <div class="container d-flex justify-content-between p-4">
+
+            {% for performance in performances %}
+        <div class="block">
+                {% for spectacle in performance.spectacles %}
+                    <h2>{{ spectacle.name }}</h2>
+                {% endfor %}
+                <p>{{ performance.title }}</p>
+        </div>
+
             {% endfor %}
-        <li>{{ performance.title }}</li>
-        {% for artist in performance.artists %}
-            <li>{{ artist.name }}</li>
-        {% endfor %}
 
+    </div>
 
-    {% endfor %}
-
-    </ul>
-
-
-    <h2>SPECTACLE </h2>
 {% endblock %}

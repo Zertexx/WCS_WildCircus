@@ -22,6 +22,16 @@
         <h2 class="text-center p-4">NOUS CONTACTER</h2>
 
 
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.phone) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.message) }}
+    {{ form_rest(form) }}
+    <button class="btn btn-success">Envoyer</button>
+    {{ form_end(form) }}
+
+
 
 
     </div>

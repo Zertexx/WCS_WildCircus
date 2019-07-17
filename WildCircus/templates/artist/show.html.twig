@@ -9,7 +9,7 @@
     <h2>{{ artist.name }}</h2>
     <h2>{{ artist.job }}</h2>
 
-    <p>On peut retrouver {{ artist.name }} dans différents show :</p>
+    <p>Vous pouvez retrouver {{ artist.name }} dans :</p>
 <ul>
 {% for performance in artist.performance %}
     <li>  {{ performance.title }} </li>
