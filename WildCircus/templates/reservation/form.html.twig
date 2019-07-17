@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réservation{% endblock %}
+
+{% block body %}
+
+
+    <div class="container text-center">
+        <h1 class="p-2">Réserver vos places</h1>
+        <hr>
+        <h2 class="p-4">A quoi ça sert ?</h2>
+        <p class="m-auto w-50">Réserver sa place vous permet de gagner du temps, de l'argent et s'assurer d'avoir une bonne place!<br>
+        En réservant votre billet vous aurez le droit à un accès gratuit au parking du cirque, une file d'attente raccourcie,
+            ainsi que des places disponibles pour les personnes ayant reservés leur billet.
+        </p>
+
+
+        <h2 class="p-5">Comment faire ?</h2>
+        <p class="m-auto w-50 pb-3">Il vous suffit de remplir le formulaire juste en dessous, un email vous sera envoyé! <strong>Pensez bien
+            bien à prendre votre carte d'identité sous peine de ne pas pouvoir profiter de l'offre
+            </strong> </p>
+        <hr>
+    </div>
+
+        <div class="container reservation">
+        <h3 class="text-center p-4">Réserver</h3>
+
+
+        {{ form_start(form) }}
+            {{ form_row(form.spectacle)  }}
+            {{ form_row(form.name) }}
+            {{ form_row(form.firstname) }}
+            {{ form_row(form.mail) }}
+            {{ form_row(form.nbperson) }}
+
+            <button class="btn btn-success">Envoyer</button>
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}
