@@ -25,7 +25,7 @@ class ContactNotification
 
     public function notify(Contact $contact)
     {
-        $message = (new \Swift_Message('Votre email a bien été envoyé!'))
+        $message = (new \Swift_Message('Message Cirque Soyeux'))
             ->setFrom('max.vasseur.79@gmail.com')
             ->setTo('max.vasseur.79@gmail.com')
             ->setBody($this->renderer->render('/email/notification.html.twig', ['contact' => $contact ]
@@ -37,7 +37,7 @@ class ContactNotification
     }
     public function reservationNotify(Reservation $reservation)
     {
-        $message = (new \Swift_Message('Votre email a bien été envoyé!'))
+        $message = (new \Swift_Message('Votre Réservation Les Soyeux'))
             ->setFrom('max.vasseur.79@gmail.com')
             ->setTo($reservation->getmail())
             ->setBody($this->renderer->render('/email/reservation.html.twig', ['reservation' => $reservation ]
